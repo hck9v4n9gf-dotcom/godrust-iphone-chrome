@@ -1402,7 +1402,7 @@ var cells = $("cells").children;
 
 function pad(s,n){ s=String(s); while(s.length<n) s=" "+s; return s; }
 function ts(){ var ms=String(Date.now()-S.t0); while(ms.length<4) ms="0"+ms; return "["+pad(ms.slice(0,-3),5)+"."+ms.slice(-3)+"]"; }
-function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&","<":"<",">":">",'"':"""}[c];}); }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"""}[c];}); }
 function tty(t, cls){
   var d=document.createElement("div"), box=$("tty");
   if(!box) return;
